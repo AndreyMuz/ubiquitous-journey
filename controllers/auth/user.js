@@ -38,7 +38,7 @@ const registration = async (req, res) => {
     <p>Your S&M CODERS Team</p>
 `;
 
-  if (EmailVerifycation.status == true) {
+  if (EmailVerifycation.status === true) {
     await sendEmail(req.body.email, EmailVerifycation.title, htmlContent);
   }
 
